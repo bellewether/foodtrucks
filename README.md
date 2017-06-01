@@ -9,6 +9,10 @@ This is a command line program that displays all of the food trucks in San Franc
   Note:
   In order to use this gem, you need Ruby 2.0.0 or above. Check which version you are running by typing ruby -v
 
+- Clone this repository
+- Once you've cloned this repository, navigate into the `foodtrucks` folder in your directory.
+- Run your program from the command line by typing `ruby show_open_food_trucks.rb`
+
 - You do not need an app token to use this program, but if you plan to make heavy use of it, you should grab one here: https://dev.socrata.com/docs/app-tokens.html
 
   Follow these steps IF you need to use an app token:
@@ -23,9 +27,6 @@ This is a command line program that displays all of the food trucks in San Franc
        with
        `SODA::Client.new({:domain => "data.sfgov.org", :app_token => APP_TOKEN})`
 
-
-- Once you've cloned this repository, navigate into the `foodtrucks` folder in your directory.
-- Run your program from the command line by typing `ruby show_open_food_trucks.rb`
 
 ## What I'd do differently if building a full-scale application
 * I'd start with OOP design. I'd prefer to abstract the API call away to its own wrapper class and create food truck objects from the results of the API call.
