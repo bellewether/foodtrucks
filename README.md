@@ -3,8 +3,8 @@ This is a command line program that displays all of the food trucks in San Franc
 
 ## What to install to run this program
 - You will need the ruby gem 'soda-ruby'
-  To install:
-  `gem install soda-ruby`
+  - To install:
+  - `gem install soda-ruby`
 
   Note:
   In order to use this gem, you need Ruby 2.0.0 or above. Check which version you are running by typing ruby -v
@@ -23,10 +23,11 @@ This is a command line program that displays all of the food trucks in San Franc
        with
        `SODA::Client.new({:domain => "data.sfgov.org", :app_token => APP_TOKEN})`
 
-- Once you've cloned this repository, navigate into the `foodtrucks` in your directory.
+
+- Once you've cloned this repository, navigate into the `foodtrucks` folder in your directory.
 - Run your program from the command line by typing `ruby show_open_food_trucks.rb`
 
 ## What I'd do differently if building a full-scale application
-* If I were asked to build a full-scale application, I'd start with OOP design. I'd prefer to abstract the API call away to its own wrapper class and create food truck objects from the results of the API call.
-* I'd imagine that a future user might not want to just query what food trucks were open right now, but also make queries based on other factors. Keeping that in mind, I'd construct the API wrapper functions to allow for not just one type of query but many and different combinations.
-* Currently, my API call retrieves all trucks open today and there is an additional step to filter the results. For a full-scale application, I would spend more time constructing the query to return only trucks that are open currently.
+* I'd start with OOP design. I'd prefer to abstract the API call away to its own wrapper class and create food truck objects from the results of the API call.
+* I'd imagine that a future user might not want to just query what food trucks were open right now, but also make queries based on other factors such as location or another day of the week if they're planning ahead. Keeping that in mind, I'd construct the API wrapper functions to allow for not just one type of query but many and different combinations. This may or may not be a feature that gets implemented, but OOP design will help with supporting future features that are yet unknown.
+* Currently, my API call retrieves all trucks open today and there is an additional step to filter the results. This isn't very efficient, but I chose not to focus my time on fixing this. For a full-scale application, I would spend more time constructing the query to return only trucks that are open currently.
